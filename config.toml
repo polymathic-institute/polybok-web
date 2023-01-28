@@ -1,4 +1,4 @@
-baseURL = "https://polymathic-institute.github.io/polybok-web/"
+baseURL = "https://library.polymathic.institute/"
 languageCode = "en-us"
 googleAnalytics = ""
 relativeURLs = false
