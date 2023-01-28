@@ -1,0 +1,3 @@
+[submodule "project-polybok"]
+	path = content
+	url = git@github.com:polymathic-institute/project-polybok.git
