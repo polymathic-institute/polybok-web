@@ -39,4 +39,4 @@ jobs:
           github_token: ${{ secrets.QUARTZ_TOKEN }}
           publish_dir: ./public
           publish_branch: master  # deploying branch
-          cname: quartz.jzhao.xyz
+          cname: library.polymathic.institute
