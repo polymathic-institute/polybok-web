@@ -10,6 +10,11 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
       - name: Update Submodule
         run: |
           git submodule init
@@ -22,13 +27,6 @@ jobs:
         with:
           github_token: ${{ secrets.QUARTZ_TOKEN }}
           branch: ${{ github.ref }}
-
-      - name: Checkout Code
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-          submodules: 'true'
-          token: ${{ secrets.QUARTZ_TOKEN }}
 
       - name: Build Link Index
         uses: jackyzha0/hugo-obsidian@v2.18
