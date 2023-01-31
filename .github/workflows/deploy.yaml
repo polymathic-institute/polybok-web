@@ -22,6 +22,9 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git commit -m "update submodule" -a
+        with:
+          github_token: ${{ secrets.QUARTZ_TOKEN }}
+          
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
